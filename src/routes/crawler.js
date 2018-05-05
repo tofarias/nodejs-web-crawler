@@ -41,9 +41,19 @@ router.post('/', (req, res) => {
 			return res.redirect('/')
 		}
 
-		//req.session.result_data = data
+		req.session.result_data = data
 
 		return res.redirect('/result')
+	})
+})
+
+router.get('/result', (req, res) => {
+	let result = req.session.result_data
+
+	req.session.result_data = []
+
+	return res.render('crawler/result', {
+		data: result
 	})
 })
 

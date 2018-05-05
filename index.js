@@ -3,6 +3,7 @@ const bodyParser = require('body-parser')
 const hbs        = require('express-hbs')
 const logger     = require('morgan')
 const path       = require('path')
+const session = require('express-session')
 const app        = express()
 
 app.set('views', path.join(__dirname, 'src/views'))
@@ -12,7 +13,12 @@ app.set('port', 3000)
 app.use(logger('dev'))
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
-
+app.use(session({ 
+	secret: 'D&@#*(DASKJHDKH!(#&(&@',
+	resave: false,
+	saveUninitialized: true,
+	cookie: { }
+}))
 app.engine('hbs', hbs.express4({
 	defaultLayout: path.join(app.get('views'), 'layouts/home.hbs'),
 	layoutsDir   : path.join(app.get('views'), 'layouts'),
