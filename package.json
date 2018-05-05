@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-web-crawler",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tofarias/nodejs-web-crawler.git"
+  },
+  "author": "Tiago Farias",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tofarias/nodejs-web-crawler/issues"
+  },
+  "homepage": "https://github.com/tofarias/nodejs-web-crawler#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "cheerio": "^1.0.0-rc.2",
+    "express": "^4.16.3",
+    "express-hbs": "^1.0.4",
+    "morgan": "^1.9.0",
+    "request": "^2.85.0"
+  }
+}
